@@ -1,0 +1,11 @@
+<launch>
+
+  <!-- Elevation mapping node -->
+  <!-- <arg name="input" default="/camera/depth/color/points"/>
+  <arg name="_prefix" default="/home/lichao/Darwin-op/src/pointcloud2pcd/pointcloud"/> -->
+  <node pkg="pcl_ros" type="pointcloud_to_pcd" name="pointcloud_to_pcd" args="input:=/camera/depth/color/points  _prefix:=/home/lichao/Darwin-op/src/pointcloud2pcd/pointcloud/" output="screen">
+    <!-- <rosparam command="load" file="$(find elevation_mapping_demos)/config/robots/simple_demo_robot.yaml" />
+    <rosparam command="load" file="$(find elevation_mapping_demos)/config/elevation_maps/simple_demo_map.yaml" />
+    <rosparam command="load" file="$(find elevation_mapping_demos)/config/postprocessing/postprocessor_pipeline.yaml" /> -->
+  </node>
+</launch>
